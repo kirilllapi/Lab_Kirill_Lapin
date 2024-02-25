@@ -45,5 +45,6 @@ public class MainAbiturient {
                 System.out.println("Вы ввели неверный номер!");
                 break;
         }
+        scanner.close();
     }
 }
