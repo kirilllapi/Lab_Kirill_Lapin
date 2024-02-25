@@ -28,5 +28,6 @@ public class Main {
         else {
             System.out.println("Вы ввели неверное количество!");
         }
+        scanner.close();
     }
 }
