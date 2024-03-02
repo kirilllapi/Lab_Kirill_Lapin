@@ -77,5 +77,6 @@ public class Main {
         else {
             System.out.println("Вы ввели неверный размер!");
         }
+        sc.close();
     }
 }

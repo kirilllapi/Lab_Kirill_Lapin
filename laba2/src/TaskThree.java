@@ -1,47 +1,13 @@
 import java.util.Random;
 
 /**
- * Объект результата нахождения максимального числа возрастающих/убываюших элементов
- */
-class MyResult {
-    private int first;
-    private int second;
-
-    public MyResult(int first, int second) {
-        this.first = first;
-        this.second = second;
-    }
-
-    public int getFirst() {
-        return first;
-    }
-
-    public void setFirst(int first) {
-        this.first = first;
-    }
-
-    public int getSecond() {
-        return second;
-    }
-
-    public void setSecond(int second) {
-        this.second = second;
-    }
-
-    @Override
-    public String toString() {
-        return "Максимальное число возрастающих элементов в строках: " + first + "\n" +
-                "Минимальное число возрастающих элементов в строках:" + second;
-    }
-}
-
-/**
  * Код третьего задания
  */
 //Найти и вывести наибольшее число возрастающих\убывающих элементов матрицы, идущих подряд.
 public class TaskThree {
     /**
      * Создает рандомную матрицу
+     *
      * @return Возвращает сгенерированную матрицу
      */
     public static int[][] Matrix(int size) {
@@ -54,6 +20,7 @@ public class TaskThree {
         }
         return matrix;
     }
+
     /**
      * Метод находящий максимальное число возрастающих/убываюших элементов в строке
      */

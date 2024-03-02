@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Введите количество полиномов: ");
-        int numPolinoms = scanner.nextInt();
+        int numPolinoms = sc.nextInt();
         if (numPolinoms > 0) {
 
 
@@ -13,14 +13,14 @@ public class main {
 
             for (int i = 0; i < numPolinoms; i++) {
                 System.out.print("Введите количество коэффициентов для полинома " + i + ": ");
-                int numCoefficients = scanner.nextInt();
+                int numCoefficients = sc.nextInt();
                 Complex[] coefficients = new Complex[numCoefficients];
                 System.out.println("Заполните коэффициенты для полинома " + i + ":");
                 for (int j = 0; j < numCoefficients; j++) {
                     System.out.print("Действительная часть коэффициента " + j + ": ");
-                    int real = scanner.nextInt();
+                    int real = sc.nextInt();
                     System.out.print("Мнимая часть коэффициента " + j + ": ");
-                    int imaginary = scanner.nextInt();
+                    int imaginary = sc.nextInt();
                     coefficients[j] = new Complex(real, imaginary);
                 }
 
@@ -29,11 +29,9 @@ public class main {
             }
 
 
-            // Вычисляем сумму всех введенных полиномов
+            // Cумма всех введенных полиномов
             Polinom totalSum = Polinoms[0];
-            for (int i = 1; i < numPolinoms; i++) {
-                totalSum = Polinom.sum(totalSum, Polinoms[i]);
-            }
+            totalSum = Polinom.AllSum(numPolinoms, totalSum, Polinoms);
 
             // Выводим результат суммы полиномов
             System.out.println("Сумма всех полиномов:");
@@ -43,6 +41,6 @@ public class main {
         } else {
             System.out.println("Вы ввели неверное количество");
         }
-        scanner.close();
+        sc.close();
     }
 }

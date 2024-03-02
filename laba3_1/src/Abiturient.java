@@ -12,10 +12,6 @@ public class Abiturient {
     private String numberPhone;
     private int[] mark;
 
-    {
-        middleName = "Undefined";
-    }
-
     Abiturient(int id, String lastName, String firstName, String middleName, String address, String numberPhone, int[] mark) {
         this.id = id;
         this.lastName = lastName;

@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public enum MenuBar {
+public enum MenuBar {
+    UNSATISFACTORY, ABOVE, TOP, EXIT;
 }
