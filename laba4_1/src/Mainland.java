@@ -35,7 +35,7 @@ public class Mainland {
     }
 
     public void setMainlandSquare(double mainlandSquare) {
-        if (mainlandSquare > 0.0) {
+        if (mainlandSquare > 0) {
             this.mainlandSquare = mainlandSquare;
         } else {
             System.out.println("Вы ввели неверное значение!");

@@ -61,7 +61,7 @@ public class TaskMain {
      * @param earth Object Planet
      */
     static void PrintPlanet(Planet earth) {
-        System.out.printf("Name planet: %s0 \n", earth.getNamePlanet());
+        System.out.printf("Name planet: %s \n", earth.getNamePlanet());
         System.out.printf("Mass planet: %s kg\n", earth.getMassPlanet());
         System.out.printf("Radius planet: %s m\n", earth.getRadiusPlanet());
     }
