@@ -1,102 +1,67 @@
 import java.util.Objects;
 
-public class SemiPreciousStone extends PreciousStone {
+public class SemiPreciousStone extends Stone {
     private String inclusions;
     private String cracks;
+    private float cleavage;
 
-    public SemiPreciousStone(float mass, String color, String name, float cost, float transparency, float hardness, float prevalence, String inclusions, String cracks) {
-        super(mass, name, color, cost, transparency, hardness, prevalence);
+    public SemiPreciousStone(float mass, String color, String name, float transparency, float cost, String inclusions, String cracks, float cleavage) {
+        this.mass = mass;
+        this.color = color;
+        this.name = name;
+        this.transparency = transparency;
+        this.cost = cost;
         this.inclusions = inclusions;
         this.cracks = cracks;
-    }
-
-    public void setColor(String color) {
-        super.setColor(color);
-    }
-
-    public String getColor() {
-        return super.getColor();
-    }
-
-    public float getMass() {
-        return super.getMass();
-    }
-
-    public void setMass(float mass) {
-        super.setMass(mass);
-    }
-
-    public float getCost() {
-        return super.getCost();
-    }
-
-    public void setCost(float cost) {
-        super.setCost(cost);
-    }
-
-    public float getHardness() {
-        return super.getHardness();
-    }
-
-    public void setHardness(float hardness) {
-        super.setHardness(hardness);
-    }
-
-    public float getPrevalence() {
-        return super.getPrevalence();
-    }
-
-    public void setPrevalence(float prevalence) {
-        super.setPrevalence(prevalence);
-    }
-
-    public float getTransparency() {
-        return super.getTransparency();
-    }
-
-    public void setTransparency(float transparency) {
-        super.setTransparency(transparency);
-    }
-
-    public String getCracks() {
-        return this.cracks;
-    }
-
-    public void setCracks(String cracks) {
-        this.cracks = cracks;
-    }
-
-    public String getInclusions() {
-        return this.inclusions;
+        this.cleavage = cleavage;
     }
 
     public void setInclusions(String inclusions) {
         this.inclusions = inclusions;
     }
 
-    public void setName(String name) {
-        super.setName(name);
+    public String getInclusions() {
+        return inclusions;
     }
 
-    public String getName() {
-        return super.getName();
+    public void setCracks(String cracks) {
+        this.cracks = cracks;
     }
 
-    public String toString() {
-        return super.toString() + ", inclusions: " + inclusions + ", cracks: " + cracks;
+    public String getCracks() {
+        return cracks;
+    }
+
+    public float getCleavage() {
+        return cleavage;
+    }
+
+    public void setCleavage(float cleavage) {
+        this.cleavage = cleavage;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
         SemiPreciousStone that = (SemiPreciousStone) o;
-        return Objects.equals(inclusions, that.inclusions) && Objects.equals(cracks, that.cracks);
+        return Float.compare(cleavage, that.cleavage) == 0 && Objects.equals(inclusions, that.inclusions) && Objects.equals(cracks, that.cracks);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), inclusions, cracks);
+        return Objects.hash(inclusions, cracks, cleavage);
+    }
+
+    @Override
+    public String toString() {
+        return  "SemiPreciousStone: " + "name='" + name + '\'' +
+                ", mass=" + mass +
+                ", color='" + color + '\'' +
+                ", cost=" + cost +
+                ", transparency=" + transparency +
+                ", inclusions='" + inclusions + '\'' +
+                ", cracks='" + cracks + '\'' +
+                ", cleavage=" + cleavage;
     }
 }

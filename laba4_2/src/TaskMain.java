@@ -53,27 +53,27 @@ public class TaskMain {
         sc.close();
     }
 
-    public static void PrintStone(List<PreciousStone> Stones) {
-        for (PreciousStone stone : Stones) {
+    public static void PrintStone(List<Stone> Stones) {
+        for (Stone stone : Stones) {
             System.out.println(stone);
         }
         System.out.println("\n");
     }
 
     public static void FindTotalMass(Necklace coolBeads) {
-        System.out.println("Total mass of the stones: " + ProcessingNecklace.massStones(coolBeads.getStonesList()) + " carat");
+        System.out.println("Total mass of the stones: " + Necklace.massStones(coolBeads.getStonesList()) + " carat");
     }
 
     public static void FindTotalCost(Necklace coolBeads) {
-        System.out.println("Total coast of the stones: " + ProcessingNecklace.CostStones(coolBeads.getStonesList()) + "$");
+        System.out.println("Total coast of the stones: " + Necklace.CostStones(coolBeads.getStonesList()) + "$");
     }
 
     public static void FindTransparency(Necklace coolBeads, float firstValue, float lastValue) {
-        PrintStone(ProcessingNecklace.FindStone(coolBeads.getStonesList(), firstValue, lastValue));
+        PrintStone(Necklace.FindStone(coolBeads.getStonesList(), firstValue, lastValue));
     }
 
     public static void TotalSortedStones(Necklace coolBeads) {
-        PrintStone(ProcessingNecklace.SortedStone(coolBeads.getStonesList()));
+        PrintStone(Necklace.SortedStone(coolBeads.getStonesList()));
     }
 }
 
